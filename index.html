@@ -162,6 +162,11 @@ td.r,th.r{text-align:right}
 .work .mono{color:var(--muted)}
 .work h3{font-size:18px;margin:4px 0 8px}
 .work ul{margin:0;padding-left:18px;font-size:14px}
+.work .shots{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;padding:16px 16px 0}
+.work .shots figure{margin:0;border:1px solid var(--line);border-radius:10px;overflow:hidden;background:#fff}
+.work .shots img{aspect-ratio:auto;object-fit:contain}
+.work .shots figcaption{font-size:12px;color:var(--muted);padding:8px 12px;border-top:1px solid var(--line)}
+@media (max-width:640px){.work .shots{grid-template-columns:1fr}}
 
 /* career */
 .timeline{display:flex;flex-direction:column}
@@ -493,10 +498,13 @@ footer.end .c{font-family:var(--mono);font-size:13px;line-height:1.9;text-align:
         </article>
         <article class="work">
           <div class="b"><span class="mono">Work 02 · 03</span><h3>한국 브랜드 호주 진출 지원</h3>
-            <ul><li>화장품 브랜드: 12주 로드맵, 3개월 예산 설계, 호주 크리에이터 영문 소개 자료·섭외</li><li>스트릿 브랜드: 호주 Shopify 스토어와 메타·구글 광고 운영, 상세페이지 개선 기획</li></ul></div>
+            <ul><li>화장품 브랜드: 12주 로드맵, 3개월 예산 설계, 호주 크리에이터 영문 소개 자료·섭외</li><li>의류 브랜드 (유스컬처 스트릿): 호주 Shopify 스토어와 메타·구글 광고 운영, 상세페이지 개선 기획</li></ul></div>
         </article>
         <article class="work" id="work-webapp" style="grid-column:1/-1">
-          <img src="img/attendance.jpg" alt="직접 만든 출퇴근 기록부 키오스크 화면 (직원 이름 블러 처리)" style="aspect-ratio:auto;object-fit:contain;border-bottom:1px solid var(--line)">
+          <div class="shots">
+            <figure><img src="img/attendance.jpg" alt="출퇴근 기록부 키오스크 화면 (직원 이름 블러 처리)"><figcaption>키오스크 화면: 부서별 직원 카드를 눌러 출퇴근 기록</figcaption></figure>
+            <figure><img src="img/attendance-admin.jpg" alt="출퇴근 기록부 관리자 화면 (직원 이름 블러 처리)"><figcaption>관리자 화면: 직원 관리, 월별 기록 조회, 엑셀 다운로드, 연차 승인</figcaption></figure>
+          </div>
           <div class="b"><span class="mono">Work 04</span><h3>웹앱 바이브 코딩 – 출퇴근 기록부 제작</h3>
             <ul><li>Claude Code로 사내 웹앱(Next.js·Supabase)에 출퇴근 기록부 기능 개발</li><li>부서별 직원 카드를 눌러 출퇴근을 기록하는 매장용 키오스크 화면과 관리자 화면 구성</li><li>월말 근무시간 집계 시간 3시간 이상 → 5분 이내</li></ul></div>
         </article>
