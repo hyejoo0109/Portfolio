@@ -53,9 +53,13 @@ main{padding:40px 0 96px;display:flex;flex-direction:column;gap:88px;min-width:0
 .reel{margin:0;flex:none;border-radius:18px;overflow:hidden;background:var(--ink);padding:5px;box-shadow:0 18px 40px -22px rgba(18,19,20,.55)}
 .reel img{border-radius:14px;aspect-ratio:9/16;object-fit:cover;width:100%}
 .reel figcaption{color:#fff;font-family:var(--mono);font-size:11px;padding:7px 6px 3px;display:flex;justify-content:space-between;gap:6px}
-.reels .reel:nth-child(1){width:30%;transform:translateY(-28px)}
-.reels .reel:nth-child(2){width:34%}
-.reels .reel:nth-child(3){width:30%;transform:translateY(-12px)}
+.reel-link{display:block;flex:none;text-decoration:none;transition:transform .15s ease}
+.reel-link .reel{width:100%}
+.reel-link:hover{transform:translateY(-4px)}
+.reel-link:hover .reel{box-shadow:0 22px 44px -20px rgba(18,19,20,.7)}
+.reels .reel-link:nth-child(1){width:30%;margin-bottom:28px}
+.reels .reel-link:nth-child(2){width:34%}
+.reels .reel-link:nth-child(3){width:30%;margin-bottom:12px}
 
 .guide{margin-top:28px;display:grid;grid-template-columns:auto 1fr;gap:6px 16px;background:var(--card);border:1px solid var(--line);border-radius:14px;padding:18px 20px;font-size:14px;max-width:560px}
 .guide .mono{color:var(--sky-deep);grid-column:1/-1}
@@ -126,6 +130,7 @@ td.r,th.r{text-align:right}
 .gallery img{width:100%;aspect-ratio:4/5;object-fit:cover;object-position:top}
 .gallery figcaption{padding:12px 14px;font-size:13px;line-height:1.55}
 .gallery figcaption b{display:block;font-size:14px}
+.gallery figcaption b a{font-weight:500;font-size:12px;color:var(--sky-deep);text-decoration:none;margin-left:4px;white-space:nowrap}
 .gallery figcaption q{color:var(--muted);display:block;margin-top:4px;quotes:"“" "”"}
 .duo{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px;margin-top:18px}
 .duo figure{margin:0;border:1px solid var(--line);border-radius:12px;overflow:hidden;background:var(--card)}
@@ -228,9 +233,9 @@ footer.end .c{font-family:var(--mono);font-size:13px;line-height:1.9;text-align:
                   </div>
       </div>
       <div class="reels" aria-label="협업 크리에이터 콘텐츠">
-        <figure class="reel"><img src="img/creator-a.jpg" alt="남미 크리에이터 틱톡 화면"><figcaption><span>남미</span><span>7만</span></figcaption></figure>
-        <figure class="reel"><img src="img/creator-b.jpg" alt="대만 크리에이터 틱톡 화면"><figcaption><span>대만</span><span>15.3만</span></figcaption></figure>
-        <figure class="reel"><img src="img/creator-c.jpg" alt="미얀마 크리에이터 틱톡 화면"><figcaption><span>미얀마</span><span>32만</span></figcaption></figure>
+        <a class="reel-link" href="https://vt.tiktok.com/ZSpttwYp2/" target="_blank" rel="noopener" aria-label="남미 크리에이터 영상 보기 (새 창)"><figure class="reel"><img src="img/creator-a.jpg" alt="남미 크리에이터 틱톡 화면"><figcaption><span>남미</span><span>7만 ↗</span></figcaption></figure></a>
+        <a class="reel-link" href="https://www.instagram.com/reel/DaPqTocRZYh/" target="_blank" rel="noopener" aria-label="대만 크리에이터 영상 보기 (새 창)"><figure class="reel"><img src="img/creator-b.jpg" alt="대만 크리에이터 영상 화면"><figcaption><span>대만</span><span>15.3만 ↗</span></figcaption></figure></a>
+        <a class="reel-link" href="https://vt.tiktok.com/ZSptthWoW/" target="_blank" rel="noopener" aria-label="미얀마 크리에이터 영상 보기 (새 창)"><figure class="reel"><img src="img/creator-c.jpg" alt="미얀마 크리에이터 틱톡 화면"><figcaption><span>미얀마</span><span>32만 ↗</span></figcaption></figure></a>
       </div>
     </section>
 
@@ -238,8 +243,8 @@ footer.end .c{font-family:var(--mono);font-size:13px;line-height:1.9;text-align:
     <section id="metrics" aria-label="핵심 성과">
       <div class="metrics">
         <div class="metric"><div class="v num">2.2<small>배</small></div><div class="k">월매출 성장</div><div class="s">2026년 2월 → 5월</div></div>
-        <div class="metric"><div class="v num">3.6<small>배</small></div><div class="k">업로드 1건당 조회수</div><div class="s">가이드라인 배포 후, 3월 → 6월</div></div>
-        <div class="metric"><div class="v num">−73<small>%</small></div><div class="k">유가 협업 CPM</div><div class="s">7월 18,409원 → 9월 4,893원</div></div>
+        <div class="metric"><div class="v num">3.6<small>배</small></div><div class="k">업로드 1건당 조회수</div><div class="s">가이드라인 배포 후, 2026년 3월 → 6월</div></div>
+        <div class="metric"><div class="v num">−73<small>%</small></div><div class="k">유가 협업 CPM</div><div class="s">2026년 7월 18,409원 → 9월 4,893원</div></div>
       </div>
     </section>
 
@@ -286,8 +291,8 @@ footer.end .c{font-family:var(--mono);font-size:13px;line-height:1.9;text-align:
     <section id="projects">
       <div class="sec-head"><span class="mono">Core Projects</span><h2>핵심 프로젝트</h2></div>
       <div class="cards">
-        <a class="pcard" href="#project-01"><span class="mono">Project 01 · 2026.03 – 10</span><b>외국인 크리에이터 시딩 캠페인</b><span>제안·기획·운영</span><em>1건당 조회수 3.6배</em><i>상세 보기 →</i></a>
-        <a class="pcard" href="#project-02"><span class="mono">Project 02 · 2026.06 – 10</span><b>성과 기반 유가 협업</b><span>기획·협상·운영</span><em>CPM 73% 개선</em><i>상세 보기 →</i></a>
+        <a class="pcard" href="#project-01"><span class="mono">Project 01 · 2026.03 – 2026.10</span><b>외국인 크리에이터 시딩 캠페인</b><span>제안·기획·운영</span><em>1건당 조회수 3.6배</em><i>상세 보기 →</i></a>
+        <a class="pcard" href="#project-02"><span class="mono">Project 02 · 2026.06 – 2026.10</span><b>성과 기반 유가 협업</b><span>기획·협상·운영</span><em>CPM 73% 개선</em><i>상세 보기 →</i></a>
         <a class="pcard" href="#other-works"><span class="mono">Project 03 · Other Works</span><b>오프라인 행사 및 중개업</b><span>크리에이터 행사 · 한국 브랜드 호주 진출 지원</span><em>호주 진출 브랜드 2곳</em><i>상세 보기 →</i></a>
         <a class="pcard" href="#work-webapp"><span class="mono">Project 04 · Other Works</span><b>웹앱 바이브 코딩 – 출퇴근 기록부 제작</b><span>Claude Code · Next.js · Supabase</span><em>집계 시간 3시간 → 5분</em><i>상세 보기 →</i></a>
       </div>
@@ -359,17 +364,17 @@ footer.end .c{font-family:var(--mono);font-size:13px;line-height:1.9;text-align:
         <div>
           <div class="chart">
             <div class="t">업로드 1건당 평균 조회수</div><div class="u">2026년 시딩 캠페인, 단위 회</div>
-            <svg id="chart-views" viewBox="0 0 600 220" role="img" aria-label="3월 2,093회, 4월 2,667회, 5월 5,090회, 6월 7,571회"></svg>
+            <svg id="chart-views" viewBox="0 0 600 220" role="img" aria-label="2026년 3월 2,093회, 4월 2,667회, 5월 5,090회, 6월 7,571회"></svg>
           </div>
           <div class="results">
-            <div class="res"><div class="v num">94%</div><div class="k">평균 업로드율 (3~10월)</div></div>
+            <div class="res"><div class="v num">94%</div><div class="k">평균 업로드율 (2026년 3~10월)</div></div>
             <div class="res"><div class="v num">3h → 1h</div><div class="k">하루 시딩 업무 시간</div></div>
-            <div class="res"><div class="v num">2.2배</div><div class="k">월매출 (2월 → 5월)</div></div>
+            <div class="res"><div class="v num">2.2배</div><div class="k">월매출 (2026년 2월 → 5월)</div></div>
           </div>
           <div class="gallery">
-            <figure><img src="img/creator-a.jpg" alt="크리에이터 A 틱톡"><figcaption><b>A · 남미 · 팔로워 1,300</b>조회 7만 · 저장 3,813 · 저장률 5.4%<q>You've been to Seongsu, Itaewon, Hongdae.. But have you been to Mangwon?</q></figcaption></figure>
-            <figure><img src="img/creator-b.jpg" alt="크리에이터 B 틱톡"><figcaption><b>B · 대만 · 팔로워 1,248</b>조회 15.3만 · 저장 6,046 · 공유 5,340<q>대만 분들에게 잘 안 알려진 곳, 서울 오면 꼭 들러보세요</q></figcaption></figure>
-            <figure><img src="img/creator-c.jpg" alt="크리에이터 C 틱톡"><figcaption><b>C · 미얀마 · 한국 거주</b>조회 32만 · 좋아요 4.5만<q>서울에 유학하는 학생의 일상을 보여드릴게요</q></figcaption></figure>
+            <figure><a href="https://vt.tiktok.com/ZSpttwYp2/" target="_blank" rel="noopener"><img src="img/creator-a.jpg" alt="크리에이터 A 틱톡 (영상 보기)"></a><figcaption><b>A · 남미 · 팔로워 1,300 <a href="https://vt.tiktok.com/ZSpttwYp2/" target="_blank" rel="noopener">영상 보기 ↗</a></b>조회 7만 · 저장 3,813 · 저장률 5.4%<q>You've been to Seongsu, Itaewon, Hongdae.. But have you been to Mangwon?</q></figcaption></figure>
+            <figure><a href="https://www.instagram.com/reel/DaPqTocRZYh/" target="_blank" rel="noopener"><img src="img/creator-b.jpg" alt="크리에이터 B 영상 (영상 보기)"></a><figcaption><b>B · 대만 · 팔로워 1,248 <a href="https://www.instagram.com/reel/DaPqTocRZYh/" target="_blank" rel="noopener">영상 보기 ↗</a></b>조회 15.3만 · 저장 6,046 · 공유 5,340<q>대만 분들에게 잘 안 알려진 곳, 서울 오면 꼭 들러보세요</q></figcaption></figure>
+            <figure><a href="https://vt.tiktok.com/ZSptthWoW/" target="_blank" rel="noopener"><img src="img/creator-c.jpg" alt="크리에이터 C 틱톡 (영상 보기)"></a><figcaption><b>C · 미얀마 · 한국 거주 <a href="https://vt.tiktok.com/ZSptthWoW/" target="_blank" rel="noopener">영상 보기 ↗</a></b>조회 32만 · 좋아요 4.5만<q>서울에 유학하는 학생의 일상을 보여드릴게요</q></figcaption></figure>
           </div>
         </div>
       </div>
@@ -412,7 +417,7 @@ footer.end .c{font-family:var(--mono);font-size:13px;line-height:1.9;text-align:
       <div class="step">
         <div class="label"><span class="mono">배경</span><h3>협업이 길어지자 CPM이 2배로</h3></div>
         <div><ul>
-          <li>유가 협업이 장기화되며 CPM이 6월 9,232원에서 7월 18,409원으로 상승</li>
+          <li>유가 협업이 장기화되며 CPM이 2026년 6월 9,232원에서 7월 18,409원으로 상승</li>
           <li>크리에이터마다 성과를 비교할 공통 기준이 없었음</li>
         </ul></div>
       </div>
@@ -444,10 +449,10 @@ footer.end .c{font-family:var(--mono);font-size:13px;line-height:1.9;text-align:
         <div>
           <div class="chart">
             <div class="t">유가 협업 CPM</div><div class="u">2026년 6~10월, 단위 원</div>
-            <svg id="chart-cpm" viewBox="0 0 600 220" role="img" aria-label="6월 9,232원, 7월 18,409원, 8월 8,863원, 9월 4,893원, 10월 8,911원"></svg>
+            <svg id="chart-cpm" viewBox="0 0 600 220" role="img" aria-label="2026년 6월 9,232원, 7월 18,409원, 8월 8,863원, 9월 4,893원, 10월 8,911원"></svg>
           </div>
           <div class="results">
-            <div class="res"><div class="v num">−73%</div><div class="k">CPM, 7월 대비 9월</div></div>
+            <div class="res"><div class="v num">−73%</div><div class="k">CPM, 2026년 7월 대비 9월</div></div>
             <div class="res"><div class="v num">3.7배</div><div class="k">재협업 비용 대비 조회수 (CPM 9,091 → 2,479원)</div></div>
             <div class="res"><div class="v num">5.6%</div><div class="k">식사권 댓글 이벤트 참여율</div></div>
           </div>
