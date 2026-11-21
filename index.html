@@ -4,10 +4,13 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>오혜주 포트폴리오</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Gothic+A1:wght@400;500;700;800&family=IBM+Plex+Sans+KR:wght@400;500;600&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
 <style>
+/* 포트폴리오 PPT와 같은 Gmarket Sans: 제목·라벨용 */
+@font-face{font-family:"GmarketSans";font-weight:300;font-display:swap;src:url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansLight.woff") format("woff")}
+@font-face{font-family:"GmarketSans";font-weight:500;font-display:swap;src:url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansMedium.woff") format("woff")}
+@font-face{font-family:"GmarketSans";font-weight:700;font-display:swap;src:url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansBold.woff") format("woff")}
 :root{
   /* 레이아웃: 왼쪽 고정 목차 + 오른쪽 본문. 모든 프로젝트는 같은 7단 템플릿. 화면 속 세로 영상 프레임이 핵심 이미지 */
   --paper:#F3F4F1;
@@ -17,9 +20,9 @@
   --line:#DADDDF;
   --sky:#A8CCFA;
   --sky-deep:#2F6FD0;
-  --display:"Gothic A1","Apple SD Gothic Neo","Malgun Gothic",sans-serif;
-  --body:"IBM Plex Sans KR","Apple SD Gothic Neo","Malgun Gothic",sans-serif;
-  --mono:"JetBrains Mono",ui-monospace,Menlo,monospace;
+  --display:"GmarketSans","Pretendard Variable",Pretendard,"Apple SD Gothic Neo","Malgun Gothic",sans-serif;
+  --body:"Pretendard Variable",Pretendard,"Apple SD Gothic Neo","Malgun Gothic",sans-serif;
+  --mono:"GmarketSans","Pretendard Variable",Pretendard,sans-serif;
   color-scheme:light;
 }
 *{box-sizing:border-box}
@@ -31,7 +34,7 @@ a{color:inherit}
 a:focus-visible,button:focus-visible{outline:2px solid var(--sky-deep);outline-offset:3px}
 h1,h2,h3{font-family:var(--display);text-wrap:balance;margin:0;letter-spacing:-0.02em}
 .num{font-variant-numeric:tabular-nums}
-.mono{font-family:var(--mono);font-size:12px;letter-spacing:.04em;text-transform:uppercase}
+.mono{font-family:var(--mono);font-weight:500;font-size:12px;letter-spacing:.03em;text-transform:uppercase}
 
 /* shell */
 .shell{display:grid;grid-template-columns:220px minmax(0,1fr);max-width:1240px;margin:0 auto;gap:48px;padding:0 32px}
@@ -141,7 +144,7 @@ td.r,th.r{text-align:right}
 .chart .t{font-weight:600;font-size:14px}
 .chart .u{font-size:12px;color:var(--muted)}
 .chart svg{width:100%;height:auto;display:block;margin-top:8px}
-.chart svg text{font-family:var(--mono);font-size:11px;fill:var(--muted)}
+.chart svg text{font-family:var(--body);font-size:11px;fill:var(--muted)}
 .chart svg .lbl{fill:var(--ink);font-weight:600}
 .results{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}
 .res{border-left:3px solid var(--sky-deep);padding:4px 0 4px 14px}
@@ -232,7 +235,7 @@ footer.end .c{font-family:var(--mono);font-size:13px;line-height:1.9;text-align:
         </div>
         <div class="guide">
           <span class="mono">3분 열람 가이드</span>
-          <b>1분</b><span><a href="#metrics">핵심 성과</a> 숫자 3개</span>
+          <b>1분</b><span><a href="#metrics">성과 하이라이트</a></span>
           <b>1분</b><span><a href="#projects">프로젝트 카드</a>에서 프로젝트별 상세 내용 살펴보기</span>
           <b>1분</b><span>각 프로젝트의 <b>실행</b>과 <b>성과</b> 차트</span>
                   </div>
